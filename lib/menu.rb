@@ -2,9 +2,12 @@ class Menu
 attr_reader :dishes
 
   def initialize
-    @dishes = [
-      { name: "Chicken", price: 5 },
-      { name: "Fish", price: 7 }
-    ]
+    @dishes = {
+      "Chicken" => 5, "Fish" => 7
+    }
+  end
+
+  def display_menu
+    @dishes.each { |key, value| puts "Item: #{key}  Price: £#{value}" }
   end
 end
